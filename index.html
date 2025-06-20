@@ -1170,6 +1170,92 @@
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
     </style>
+
+    <style>
+        /*
+        ==========================================================================
+        * INÍCIO: Estilos Personalizados para o Formulário Bitrix24
+        * Estes estilos são aplicados aos elementos gerados pelo formulário do Bitrix.
+        * O uso de "!important" é necessário para sobrescrever os estilos
+        * inline que o Bitrix costuma aplicar.
+        ==========================================================================
+        */
+
+        /* Estilo para o contêiner geral do formulário, adicionando um fundo e preenchimento.
+        O seletor de atributo [data-b24-form-spec] garante que o estilo só se aplique
+        ao container onde o Bitrix injeta o formulário. */
+        div[data-b24-form-spec] {
+            background-color: #FFFFFF;
+            /* Fundo branco para o formulário */
+            padding: 25px !important;
+            border-radius: 10px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+            /* Sombra suave */
+        }
+
+        /* Estilo para os campos de entrada de texto, e-mail e telefone */
+        .b24-form-field input[type="text"] {
+            width: 100% !important;
+            border: 1px solid #D1D3D4 !important;
+            /* Borda cinza claro */
+            padding: 12px 15px !important;
+            font-size: 16px !important;
+            font-family: "Poppins", Sans-serif !important;
+            border-radius: 5px !important;
+            background-color: #ffffff !important;
+            color: #333 !important;
+            box-sizing: border-box !important;
+            margin-bottom: 10px !important;
+            /* Espaçamento entre os campos */
+        }
+
+        /* Estilo para os títulos (labels) dos campos do formulário */
+        .b24-form-field-label {
+            font-family: "Poppins", Sans-serif !important;
+            font-size: 14px !important;
+            color: #606060 !important;
+            /* Cor cinza escuro para os textos */
+            font-weight: 500 !important;
+            margin-bottom: 8px !important;
+            /* Espaço abaixo do label */
+        }
+
+        /* Estilo para o botão de envio */
+        .b24-form-btn {
+            background-color: #782878 !important;
+            /* Cor primária roxa do seu site */
+            color: #ffffff !important;
+            width: 100% !important;
+            border: none !important;
+            border-radius: 5px !important;
+            padding: 12px 20px !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: background-color 0.3s ease-in-out !important;
+        }
+
+        /* Efeito de hover para o botão de envio */
+        .b24-form-btn:hover {
+            background-color: #8ed05a !important;
+            /* Cor secundária verde do seu site */
+        }
+
+        /* Estilo para o texto de consentimento (LGPD) */
+        .b24-form-control-container .b24-form-lgpd-text {
+            font-size: 11px !important;
+            color: #606060 !important;
+        }
+
+        /* Oculta a assinatura "Powered by Bitrix24" (opcional) */
+        .b24-form-sign {
+            display: none !important;
+        }
+
+        /*
+        FIM: Estilos Personalizados para o Formulário Bitrix24
+        */
+    </style>
 </head>
 
 <body class="page-template-default page page-id-10264 elementor-default">
@@ -3761,9 +3847,6 @@
 
     // A função 'exibirMensagemSucesso' precisa ser definida se você planeja que ela faça algo.
     // Exemplo básico:
-    function exibirMensagemSucesso() {
-        alert("Formulário enviado com sucesso!");
-    }
 
 
     //Esconder o campo de cupom, que era do formulário antigo
